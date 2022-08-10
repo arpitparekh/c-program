@@ -3,7 +3,7 @@
 
 int main(){
 
-    int arr[] = {12,45,65,32,1000,11,67,55,99};   // 67
+  int arr[] = {12,45,65,32,1000,11,67,55,99};   // 67
 
     // find a max element inside an array
 
