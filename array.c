@@ -23,8 +23,5 @@ int main(){
 
     printf("%f\n",arr[3]);
 
-
-
-
     return 45;
 }
