@@ -34,9 +34,13 @@ int main(){
 
     for(int i=1;i<=5;i++){ // i = 5
 
+        for(int k=4;k>=i;k--){
+            printf(" ");
+        }
+
         for(int j=1;j<=i;j++){
 
-            printf(" * ");
+            printf(" *");
 
         }
 
@@ -62,10 +66,12 @@ int main(){
     //  31 32 33
     //  41 42 43 44 
 
+    printf("\n");
 
-    for(int i=1;i<=4;i++){ // i = 5
 
-        for(int j=4;j>=i;j--){ // 5 // 4 //
+    for(int i=1;i<=5;i++){ // i = 5
+
+        for(int j=5;j>=i;j--){ // 5 // 4 //
 
                 printf(" * ");
 
