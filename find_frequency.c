@@ -10,7 +10,7 @@ int main(){
 
     // bhoomesh  // 3
 
-    char name[50];
+    char name[50];  // hello student\0
 
     printf("Enter String\n");
 
@@ -18,25 +18,23 @@ int main(){
 
     printf("Enter Character\n");
 
-    char ch; //  'l'  // 2  //    \0  
+    // char ch; //  'l'  // 2  //    \0  
 
-    // every string ends with 
+    // // every string ends with 
 
-    scanf("%c",&ch);
+    // scanf("%c",&ch);
 
     int counter = 0;
 
 
     for(int i=0;  name[i]!='\0'  ; i++){
 
-           if(name[i] == ch){
-
+           if(name[i] == ' '){
                 counter++;  // 2
-
            }
     }
 
-    printf("Frequncy of character %c is %d\n",ch,counter);
+    printf("Frequncy of character space is %d\n",counter);
 
 
     return 67;
