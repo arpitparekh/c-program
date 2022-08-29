@@ -31,10 +31,19 @@ int main(){
 
     }
 
+    // int x = 454545;
+
+    // [4,5,4,5,4,5]
+
+
+    // a  =12  // b = 13
+    //  temp = a;
+    //  a = b;
+    //  b = temp;
+
     printf("\n");
 
     puts(str);
-    
 
     return 50;
 
