@@ -22,5 +22,9 @@ int main(){
 
     printf("%d\n",*p);
 
+    int* p1 = NULL;   // null pointer
+
+    printf("%p",&p1);
+
     return 67;
 }
