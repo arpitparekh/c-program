@@ -6,7 +6,11 @@ int main(){
 
     printf("Hello\n");
 
-    return;
+    return;    // jump statement
+
+    // break;
+    // 1 switch case
+    // 2 loop
 
     printf("Hi\n");
 
