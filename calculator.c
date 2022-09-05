@@ -21,7 +21,7 @@ int main(){
     switch(choice){
 
         case 1:
-            printf("Sum is %d\n",a+b);
+                printf("Sum is %d\n",a+b);
             break;
         case 2:
             printf("Sub is %d\n",a-b);
