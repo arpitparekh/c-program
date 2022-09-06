@@ -4,73 +4,109 @@
 
 int main(){
 
+
     // dynamic memory allocation
 
-    // reserve some memory space for future use is called dynamic memory allocation
-
-    // int arr[5];  // 20 bytes
-
-    // malloc()   // memory allocation
-    // calloc()   // contigious allocation
-    // free()
-    // realloc()  // re - allocation
+    printf("Enter the space to occupy\n");
 
     int size;
-    printf("Enter the size to Reserve in Memory\n");
-    scanf("%d",&size);
 
-    int* ptr;   // null
+    scanf("%d",&size);  // 5
 
-    // 4  // int   // 16 bytes
+    int* ptr;
 
-    ptr=(int*)malloc(size*sizeof(int));   // malloc return the NULL pointer
+    ptr =(int*)calloc(size,sizeof(int));
 
-    // 10  // 12
+    printf("Your Reserved Locations are\n");
 
-
-    for(int i=0;i<size;i++){  // 0  // 1  // 2  // 3
+    for(int i=0;i<size;i++){
 
         printf("%p\n",ptr+i);
 
     }
 
-    printf("Values inside those location is\n");
+    printf("Enter Values in those Location\n");
 
-    for(int i=0;i<size;i++){  // 0  // 1  // 2  // 3
-
-        printf("[%p] = %d\n",ptr+i,*(ptr+i));
-
-    }
-
-    printf("Enter Values in Those Location\n");
-
-    for(int i=0;i<size;i++){  // 0  // 1  // 2  // 3
+    for(int i=0;i<size;i++){
 
         scanf("%d",ptr+i);
 
     }
 
-    printf("Values inside those location is\n");
+    printf("Your Entered Values are\n");
 
-    for(int i=0;i<size;i++){  // 0  // 1  // 2  // 3
+    for(int i=0;i<size;i++){
 
         printf("[%p] = %d\n",ptr+i,*(ptr+i));
 
     }
 
-    ///////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////
+
+    printf("Enter New Size\n");
+
+    int newSize;
+
+    scanf("%d",&newSize);
+
+    ////////////////////////////////////////////////
 
     // realloc()
 
-    // 5 // 1 2 3 4 5  // 1 2 3 4 5  // [] [] [] [] [] []
+    ptr=realloc(ptr,newSize*sizeof(int));
 
-    ptr=realloc(ptr,6*sizeof(int));
+    //////////////////////////////////////////////
 
-    for(int i=0;i<6;i++){  // 0  // 1  // 2  // 3
+    printf("new Locations are\n");
+
+    for(int i=0;i<newSize;i++){
 
         printf("%p\n",ptr+i);
 
     }
+
+    //////////
+
+    printf("Value inside those locations are\n");
+
+    for(int i=0;i<newSize;i++){
+
+        printf("[%p] = %d\n",ptr+i,*(ptr+i));
+
+    }
+
+    printf("Add Value in new Locations\n");
+
+    for(int i=size;i<newSize;i++){  // 5  // 7
+
+        scanf("%d",ptr+i);
+
+    }
+
+    printf("All the Values\n");
+
+    for(int i=0;i<newSize;i++){
+
+        printf("[%p] = %d\n",ptr+i,*(ptr+i));
+
+    }
+
+    /////////////////////////////////////
+
+    free(ptr);   // free all the location and values
+
+    printf("All the Values\n");
+
+    for(int i=0;i<newSize;i++){
+
+        printf("[%p] = %d\n",ptr+i,*(ptr+i));
+
+    }
+
+
+
+
+
 
 
     return 56;
